@@ -1,0 +1,25 @@
+body {
+  background-color: hsl(253deg, 50%, 63%);
+}
+
+.sun {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: hsl(60deg, 100%, 50%);
+  box-shadow: 0 0 20px rgb(255, 255, 71);
+}
+
+h1 {
+  color: hsl(0deg, 0%, 100%);
+  display: flex;
+  justify-content: center;
+  font-size: 100px;
+}
+
+.flower {
+  height: 200px;
+  width: 4px;
+  top: 70%;
+  background-color: hsl(290deg, 67%, 35%);
+}/*# sourceMappingURL=style.css.map */

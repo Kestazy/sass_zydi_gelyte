@@ -1,0 +1,24 @@
+@import 'mixin', 'var';
+
+body{
+    background-color: hsl(253, 50%, 63%);
+}
+
+.sun{
+    @include round;
+    background-color: hsl(60, 100%, 50%);
+    box-shadow: 0 0 20px rgb(255, 255, 71);
+}
+
+h1{
+  color: $textColor;
+  @include flexCenter;
+  font-size: 100px;
+}
+
+.flower{
+    height: 200px;
+    width: 4px;
+    top: 70%;
+    background-color: hsl(290, 67%, 35%);
+}
