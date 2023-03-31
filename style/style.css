@@ -1,25 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: hsl(253deg, 50%, 63%);
+  background-color: hsl(253, 50%, 63%);
+  height: 100vh;
 }
 
 .sun {
-  height: 60px;
-  width: 60px;
+  height: 15%;
+  position: relative;
+}
+.sun::before {
+  content: "";
+  height: 70px;
+  width: 70px;
   border-radius: 50%;
-  background-color: hsl(60deg, 100%, 50%);
-  box-shadow: 0 0 20px rgb(255, 255, 71);
+  background-color: hsl(60, 100%, 50%);
+  box-shadow: 0 0 25px rgb(255, 255, 71);
+  position: absolute;
+  bottom: 50%;
+  right: 70%;
+  transform: translate(50%, 50%);
+  animation-name: gogo;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+}
+@keyframes gogo {
+  0% {
+    top: 15%;
+    right: 110%;
+  }
+  100% {
+    top: 15%;
+    right: 70%;
+  }
 }
 
 h1 {
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   display: flex;
-  justify-content: center;
-  font-size: 100px;
+  justify-content: space-around;
+  align-items: flex-end;
+  align-items: flex-start;
+  height: 35%;
+  padding: 5rem;
+  font-size: 76px;
+  animation: kuku 4s;
+}
+@keyframes kuku {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    padding: 0;
+    opacity: 0;
+    font-size: 5px;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-.flower {
-  height: 200px;
-  width: 4px;
-  top: 70%;
-  background-color: hsl(290deg, 67%, 35%);
+.flowers {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 50%;
+  width: 100%;
+}
+.flowers .flowerone {
+  height: 18rem;
+  width: 6px;
+  background-color: hsl(120, 51%, 37%);
+  position: relative;
+  animation: goup 2s 0.5s ease-in-out forwards;
+}
+@keyframes goup {
+  0% {
+    max-height: 1%;
+  }
+  100% {
+    max-height: 100%;
+  }
+}
+.flowers .flowerone::before {
+  content: "";
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: hsl(265, 57%, 36%);
+  position: absolute;
+  bottom: 102%;
+  right: 50%;
+  transform: translate(50%, 50%);
+  animation: pump 3s 0.5s ease-in-out infinite alternate;
+}
+@keyframes pump {
+  0% {
+    right: -530%;
+    transform: scale(1);
+  }
+  100% {
+    right: -530%;
+    transform: scale(1.1);
+  }
+}
+.flowers .flowerone::after {
+  content: "";
+  border-top-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  rotate: -60deg;
+  height: 30px;
+  width: 50px;
+  position: absolute;
+  right: -350%;
+  transform: translate(50%, 50%);
+  bottom: 60%;
+  background-color: hsl(138, 55%, 29%);
+}
+.flowers .flowertwo {
+  height: 22rem;
+  width: 6px;
+  background-color: hsl(120, 51%, 37%);
+  position: relative;
+  animation: goup 2s 0.5s ease-in-out forwards;
+}
+@keyframes goup {
+  0% {
+    max-height: 1%;
+  }
+  100% {
+    max-height: 100%;
+  }
+}
+.flowers .flowertwo::before {
+  content: "";
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: hsl(312, 61%, 42%);
+  position: absolute;
+  bottom: 100%;
+  right: 50%;
+  transform: translate(50%, 50%);
+  animation: pump 1s 0.5s ease-in-out infinite alternate;
+}
+@keyframes pump {
+  0% {
+    bottom: 90%;
+    right: -530%;
+    transform: scale(1);
+  }
+  100% {
+    bottom: 90%;
+    right: -530%;
+    transform: scale(1.1);
+  }
+}
+.flowers .flowertwo::after {
+  content: "";
+  border-top-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  rotate: -60deg;
+  height: 30px;
+  width: 50px;
+  position: absolute;
+  right: -350%;
+  transform: translate(50%, 50%);
+  bottom: 70%;
+  background-color: hsl(138, 55%, 29%);
 }/*# sourceMappingURL=style.css.map */

@@ -1,10 +1,22 @@
 @mixin round(){
-    height: 60px;
-    width: 60px;
+    height: 70px;
+    width: 70px;
     border-radius: 50%;
 }
 
 @mixin flexCenter(){
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+@mixin leaf(){
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    rotate: -60deg;
+    height: 30px;
+    width: 50px;
+    position: absolute;
+    right: -350%;
+    transform: translate(50%, 50%);
 }
